@@ -47,6 +47,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public Order create(String userId, String commodityCode, int orderCount) {
+
         LOGGER.info("Order Service Begin ... xid: " + RootContext.getXID());
 
         // 计算订单金额
@@ -83,8 +84,8 @@ public class OrderServiceImpl implements OrderService {
         order.id = keyHolder.getKey().longValue();
 
         LOGGER.info("Order Service End ... Created " + order);
-
-        return order;
+        throw new RuntimeException("xxx");
+//        return order;
     }
 
     /**
