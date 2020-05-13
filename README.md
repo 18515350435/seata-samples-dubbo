@@ -1,3 +1,4 @@
+#启动步骤
 ##业务数据库mysql中建立业务表
 执行文件 业务数据库表.sql 中的sql
 理论上应该建立在seata-samples-dubbo\dubbo\src\main\resources\jdbc.properties配置文件中三个不同的数据库中，
