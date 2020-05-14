@@ -84,8 +84,8 @@ public class OrderServiceImpl implements OrderService {
         order.id = keyHolder.getKey().longValue();
 
         LOGGER.info("Order Service End ... Created " + order);
-        throw new RuntimeException("xxx");
-//        return order;
+//        throw new RuntimeException("xxx");
+        return order;
     }
 
     /**

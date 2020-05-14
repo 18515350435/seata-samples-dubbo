@@ -42,13 +42,13 @@ public class BusinessServiceImpl implements BusinessService {
     public void purchase(String userId, String commodityCode, int orderCount) {
         LOGGER.info("purchase begin ... xid: " + RootContext.getXID());
         storageService.deduct(commodityCode, orderCount);
-        try {
+//        try {
             orderService.create(userId, commodityCode, orderCount);
-        }catch (Exception e){
-            System.out.println("orderService.create  异常！！");
-        }
+//        }catch (Exception e){
+//            System.out.println("orderService.create  异常！！");
+//        }
         //主动抛异常回滚，如果不想回滚可以注释掉这行
-//        throw new RuntimeException("xxx");
+        throw new RuntimeException("xxx");
 
     }
 
